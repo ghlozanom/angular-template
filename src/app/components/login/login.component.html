@@ -1,0 +1,28 @@
+
+<div class="content">
+<form [formGroup]="loginForm" (ngSubmit)="submit(loginForm)" #formDirective="ngForm" >
+    <mdc-form-field fluid>
+      <mdc-text-field formControlName="username" label="Username" outlined
+        [errorStateMatcher]="matcher"></mdc-text-field>
+        <mdc-helper-text class="loginField" validation>{{usernameValidationMessage}}</mdc-helper-text>
+    </mdc-form-field>
+    <mdc-form-field fluid>
+        <mdc-text-field formControlName="password" label="Password" outlined type="password"
+          [errorStateMatcher]="matcher"></mdc-text-field>
+          <mdc-helper-text class="loginField" validation>{{passwordValidationMessage}}</mdc-helper-text>
+    </mdc-form-field>    
+    <div class="demo-layout__row">
+      <button class="loginButton" mdc-button raised type="submit">Submit</button>
+      <!-- <button mdc-button type="button" (click)="resetForm(formDirective)">Reset</button>
+      <button mdc-button type="button" (click)="loginForm.controls['username'].setValue('User-1')">Set Value</button> -->
+    </div>
+  </form>
+  
+  <!-- <p>Control Valid: {{loginForm.controls['username'].valid}}</p>
+  <p>Dirty: {{ loginForm.dirty }}</p>
+  <p>Valid: {{ loginForm.valid }}</p>
+  <p>Pristine: {{ loginForm.pristine }}</p>
+  <p>Touched: {{ loginForm.touched }}</p>
+  <p>Value: {{ loginForm.value | json }}</p> -->
+
+</div>

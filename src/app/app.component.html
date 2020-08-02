@@ -1,0 +1,5 @@
+
+<div *ngIf="(userLoggedIn$ | async) == true; else elseBlock">Content to render when condition is true.</div>
+<ng-template #elseBlock>
+    <app-login></app-login>
+</ng-template>
