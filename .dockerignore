@@ -1,0 +1,9 @@
+# # Ignore everything
+# **
+
+# # Allow files and directories
+# !/nginx.conf
+# !/dist/**
+
+dist
+node_modules
